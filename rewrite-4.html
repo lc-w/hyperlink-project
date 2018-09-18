@@ -25,7 +25,28 @@
 	</header>
 	
 	<section id="content">
-		<p></p>
+		<div class="row">
+  <div class="column" style="background-color:#D4D7D8;">
+    <h2>This URL is where I'm starting from </h2>
+<form action="/action_page.php">
+URL: <input type="text" name="URL"><br>
+<input type="submit" value="Submit">
+</form>
+<p id="run-url"></p>
+      <script>
+function myFunction() {
+  document.getElementById("run-url").innerHTML = "Hello World";
+}
+</script>
+  </div>
+  <div class="column" id="sketch-holder-right" style="background-color:#bbb;">
+    <h2>Rewrite!</h2>
+      <form action="/action_page.php">
+  Add your ideas: <input type="text" id="text-box" >
+  <input type="submit" value="Download to Map">
+</form>
+  </div>
+</div>
 	</section>
 </body>
 </html>

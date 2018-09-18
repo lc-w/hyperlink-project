@@ -6,7 +6,27 @@
         <link rel=stylesheet type="text/css" href="tabs-styles.css">
         <script src="p5.js"></script>
         <script src="addons/p5.dom.js"></script>
+        <script src="draw.js"></script>
+        
+<style>
+* {
+   box-sizing: border-box;
+}
 
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 20px;
+    height: 600px; 
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+  
+}
+</style>
 	<!--[if lt IE 9]><script src="/r10/html5shiv.js"></script><![endif]-->
 </head>
 <body>
@@ -25,7 +45,25 @@
 	</header>
 	
 	<section id="content">
-		<p></p>
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>This URL is where I'm starting from </h2>
+<form action="/action_page.php">
+URL: <input type="text" name="URL"><br>
+<input type="submit" value="Submit">
+</form>
+<p id="run-url"></p>
+      <script>
+function myFunction() {
+  document.getElementById("run-url").innerHTML = "Hello World";
+}
+</script>
+  </div>
+  <div class="column" id="sketch-holder-right" style="background-color:#D4D7D8;">
+    <h2>Draw!</h2>
+      <a id="download" download="image.png"><button type="button" onClick="download()">Download to Map</button></a>
+  </div>
+</div>
 	</section>
 </body>
 </html>
